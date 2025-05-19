@@ -131,12 +131,12 @@
           "Avalonia.Remote.Protocol": "11.2.7"
         },
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Avalonia.Controls.DataGrid.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Avalonia.Controls.DataGrid.dll": {
             "related": ".xml"
           }
         }
@@ -1505,6 +1505,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Avalonia >= 11.2.7",
+      "Avalonia.Controls.DataGrid >= 11.2.7",
       "Avalonia.Desktop >= 11.2.7",
       "Avalonia.Diagnostics >= 11.2.7",
       "Avalonia.Fonts.Inter >= 11.2.7",
@@ -1568,6 +1569,10 @@
             "target": "Package",
             "version": "[11.2.7, )"
           },
+          "Avalonia.Controls.DataGrid": {
+            "target": "Package",
+            "version": "[11.2.7, )"
+          },
           "Avalonia.Desktop": {
             "target": "Package",
             "version": "[11.2.7, )"
@@ -1614,13 +1619,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }

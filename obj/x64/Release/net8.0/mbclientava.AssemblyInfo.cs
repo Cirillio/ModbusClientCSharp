@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mbclientava")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e362238a56d1b71283574d6a578d0c2f30696402")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52e0b52a56ec561e8414ab6c1ddaa5e69a6c3c5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("mbclientava")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mbclientava")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
