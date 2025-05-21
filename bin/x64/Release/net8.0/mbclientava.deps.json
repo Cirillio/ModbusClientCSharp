@@ -9,6 +9,7 @@
       "mbclientava/1.0.0": {
         "dependencies": {
           "Avalonia": "11.2.7",
+          "Avalonia.Controls.DataGrid": "11.2.7",
           "Avalonia.Desktop": "11.2.7",
           "Avalonia.Diagnostics": "11.2.7",
           "Avalonia.Fonts.Inter": "11.2.7",
@@ -103,6 +104,12 @@
         "dependencies": {
           "Avalonia": "11.2.7",
           "Avalonia.Remote.Protocol": "11.2.7"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Controls.DataGrid.dll": {
+            "assemblyVersion": "11.2.7.0",
+            "fileVersion": "11.2.7.0"
+          }
         }
       },
       "Avalonia.Desktop/11.2.7": {

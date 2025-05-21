@@ -5,6 +5,7 @@
     xmlns:controls="clr-namespace:Avalonia.Controls;assembly=Avalonia.Controls.DataGrid"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:v="using:mbclientava.Models"
     xmlns:vm="using:mbclientava.ViewModels"
     Title="Modbus Slave — Energy Meter"
     Width="800"
@@ -21,6 +22,10 @@
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
 
 
     <Window.Styles>
@@ -49,9 +54,6 @@
         </Style>
     </Window.Styles>
 
-    <Window.DataContext>
-        <vm:MainWindowViewModel />
-    </Window.DataContext>
 
     <Border
         Background="#f5f5f5"
@@ -115,7 +117,6 @@
                     VerticalAlignment="Bottom"
                     Spacing="10">
 
-
                     <TextBlock
                         FontSize="20"
                         FontWeight="Bold"
@@ -148,17 +149,14 @@
                         BorderBrush="#42ace1"
                         BorderThickness="2"
                         FontSize="16"
-                        Text="1">
+                        Text="2">
                         <TextBox.Styles>
-                            <!--  цвет рамки при наведении  -->
+
                             <Style Selector="TextBox:pointerover /template/ Border">
                                 <Setter Property="BorderBrush" Value="#08adff" />
                                 <Setter Property="Background" Value="White" />
-
-                                <!--  оранжевый, к примеру  -->
                             </Style>
 
-                            <!--  можно сразу задать цвет рамки в фокусе, если нужно  -->
                             <Style Selector="TextBox:focus  /template/ Border">
                                 <Setter Property="BorderBrush" Value="#08adff" />
                             </Style>
@@ -238,7 +236,6 @@
                         Grid.Row="1"
                         BorderBrush="#42ace1"
                         BorderThickness="2">
-
                         <DataGrid
                             AutoGenerateColumns="False"
                             BorderBrush="Gray"
@@ -261,13 +258,11 @@
                                     Binding="{Binding Value, Mode=TwoWay}"
                                     Header="Value" />
                                 <DataGridCheckBoxColumn
-                                    Width="100"
+                                    Width="*"
                                     Binding="{Binding Writable, Mode=TwoWay}"
                                     Header="Writable" />
                             </DataGrid.Columns>
                         </DataGrid>
-
-
                     </Border>
 
                     <StackPanel

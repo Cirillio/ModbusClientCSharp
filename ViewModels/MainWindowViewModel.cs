@@ -23,6 +23,19 @@ namespace mbclientava.ViewModels
 
         public readonly ISlaveDataStore _dataStore = new SlaveDataStore();
 
+        //private string slaveID;
+        //public string slava
+        //{
+        //    get => slaveID;
+        //    set
+        //    {
+        //        if (slaveID == value) return;
+
+        //        slaveID = value;
+        //        OnChanged(nameof(slava));
+        //    }
+        //}
+
         private ObservableCollection<RegisterRow> registers;
         public ObservableCollection<RegisterRow> Registers { get => registers; set { registers = value; OnChanged(nameof(Registers)); } }
         public ObservableCollection<string> Logs { get; } = [];
@@ -82,7 +95,7 @@ namespace mbclientava.ViewModels
 
         private void LoadDefaultRegisters()
         {
-            var _registers = new List<RegisterRow>
+            var regss = new List<RegisterRow>
             {
                 new("Voltage", 1, 2300, false),
                 new("Current", 2,105, false),
@@ -91,7 +104,7 @@ namespace mbclientava.ViewModels
                 new("Mode", 5, 3333, true)
             };
 
-            Registers = [.. _registers];
+            Registers = new ObservableCollection<RegisterRow>(regss);
         }
 
         private bool IsRunning => _listener != null;
@@ -117,7 +130,7 @@ namespace mbclientava.ViewModels
                 Logs.Add($"Started listening on port {port}");
 
 
-                _slave = _factory.CreateSlave(1, _dataStore);
+                _slave = _factory.CreateSlave(2, _dataStore);
 
                 foreach (var reg in Registers)
                 {
